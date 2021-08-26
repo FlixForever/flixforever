@@ -13,7 +13,8 @@ html {
 :root {
   --nexa-light: "nexa-light", sans-serif;
   --nexa-bold: "nexa-bold", sans-serif;
-  --bebas: "bebas", sans-serif;
+  --bebas: "Bebas Neue", sans-serif;
+
   --integral-regular: "integral-regular", sans-serif;
   --integral-bold: "integral-bold", sans-serif;
   --raleway: "Raleway", sans-serif;
@@ -299,7 +300,6 @@ section {
 .section-header h2 {
   font-size: 50px;
   font-family: var(--bebas);
-  letter-spacing: -1px;
 }
 
 .section-header p {
