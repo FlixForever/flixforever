@@ -66,6 +66,10 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.sellix.io/static/js/embed.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <!-- <div class="loader">
@@ -92,6 +96,7 @@
             <img
               src="./images/logo.png"
               alt="FlixForever type logo"
+              draggable="false"
               id="navLogo"
             />
             <!-- ---x--- logo svg ---x--- -->
@@ -111,7 +116,7 @@
     <section class="hero">
       <div class="wrapper landing">
         <div class="content">
-          <h1>
+          <h1 class="animate__animated animate__headShake">
             lifetime <span>netflix</span><br />
             <div class="secondaryHeader">for a fraction of a month’s fee.</div>
           </h1>
@@ -139,7 +144,9 @@
           <img
             src="images/Mockups.png"
             id="tv"
+            draggable="false"
             alt="Flix Forever mobile and TV mockup"
+            class="animate__animated animate__bounceInRight"
           />
           <!-- <div id="grains"></div> -->
         </div>
@@ -163,12 +170,14 @@
           class="replace-img"
           src="./images/About.png"
           alt="Flix Forever features list"
+          draggable="false"
         />
         <div class="content">
           <img
             src="./images/about-mobile.png"
             alt="Flix Forever features graphic"
             id="aboutUsMobile"
+            draggable="false"
           />
         </div>
       </div>
@@ -635,7 +644,11 @@
             >
           </div>
           <div class="part">
-            <img src="./images/discord-logo.png" alt="Discord Logo" />
+            <img
+              src="./images/discord-logo.png"
+              alt="Discord Logo"
+              draggable="false"
+            />
           </div>
         </div>
         <div class="content">

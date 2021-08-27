@@ -2,14 +2,20 @@ html {
   overflow-x: hidden;
 }
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
-@import url(./css/fonts.css);
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
 :root {
   --nexa-light: "nexa-light", sans-serif;
   --nexa-bold: "nexa-bold", sans-serif;
@@ -258,8 +264,13 @@ a {
   text-transform: capitalize;
   font-size: 1.25rem; /* 20px */
   color: var(--black);
+  transition: box-shadow 400ms;
 }
-
+.btn:hover {
+  box-shadow: #b1060f4f 0px 35px 50px;
+  -webkit-box-shadow: #b1060f4f 0px 35px 50px;
+  -moz-box-shadow: #b1060f4f 0px 35px 50px;
+}
 .btn2 {
   display: inline-block;
   padding: 17px 34px;
@@ -271,6 +282,12 @@ a {
   margin-right: 20px;
   cursor: pointer;
   font-weight: bold;
+  transition: box-shadow 400ms;
+}
+.btn2:hover {
+  box-shadow: #b1060f4f 0px 35px 80px;
+  -webkit-box-shadow: #b1060f4f 0px 35px 80px;
+  -moz-box-shadow: #b1060f4f 0px 35px 80px;
 }
 .altBtn2 {
   background-color: rgba(0, 0, 0, 0.308);
@@ -795,6 +812,7 @@ header .header .bar-btns i {
   font-size: 10px;
   background-color: var(--dark-gray);
   border-radius: 50px;
+  font-weight: bold;
   width: max-content;
   width: fit-content;
 }
@@ -927,10 +945,11 @@ header .header .bar-btns i {
 .section-5 .content .item {
   margin: 30px 0;
   position: relative;
+  font-size: 14px;
 }
 
 .section-5 .content .item.active {
-  height: 70px;
+  height: 100px;
 }
 
 .section-5 .content .item .title {
@@ -979,6 +998,7 @@ header .header .bar-btns i {
   font-size: 18px;
   color: #e1e1e1;
   opacity: 0.7;
+  margin-bottom: 10px;
 }
 
 /* ----x---- section 5 ----x---- */
@@ -1216,14 +1236,6 @@ footer .content .copyright {
 
   /* --------- section 5 --------- */
 
-  .section-5 .content .item .title p {
-    font-size: 20px;
-  }
-
-  .section-5 .content .item .dropdown-content p {
-    font-size: 17px;
-  }
-
   /* ----x---- section 5 ----x---- */
 }
 
@@ -1414,14 +1426,6 @@ footer .content .copyright {
   /* ----x---- section 4 ----x---- */
 
   /* --------- section 5 --------- */
-
-  .section-5 .content .item .title p {
-    font-size: 18px;
-  }
-
-  .section-5 .content .item .dropdown-content p {
-    font-size: 16px;
-  }
 
   /* ----x---- section 5 ----x---- */
 
@@ -1632,10 +1636,6 @@ footer .content .copyright {
 
   /* --------- section 5 --------- */
 
-  .section-5 .content .item .title p {
-    font-size: 17px;
-  }
-
   .section-5 .content .item.active {
     height: 85px;
   }
@@ -1747,13 +1747,6 @@ footer .content .copyright {
 
   .section-5 .content .item .title .buttons {
     margin-left: 20px;
-  }
-  .section-5 .content .item .title p {
-    font-size: 15px;
-  }
-
-  .section-5 .content .item .dropdown-content p {
-    font-size: 14px;
   }
 
   .section-5 .content .item.active {
