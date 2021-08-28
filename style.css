@@ -949,7 +949,7 @@ header .header .bar-btns i {
 }
 
 .section-5 .content .item.active {
-  height: 100px;
+  height: 150px;
 }
 
 .section-5 .content .item .title {
@@ -990,12 +990,12 @@ header .header .bar-btns i {
 
 .section-5 .content .item .dropdown-content.show {
   opacity: 1;
-  top: 20px;
+  top: 40px;
 }
 
 .section-5 .content .item .dropdown-content p {
   font-family: var(--nexa-light);
-  font-size: 18px;
+  font-size: 15px;
   color: #e1e1e1;
   opacity: 0.7;
   margin-bottom: 10px;
@@ -1637,7 +1637,7 @@ footer .content .copyright {
   /* --------- section 5 --------- */
 
   .section-5 .content .item.active {
-    height: 85px;
+    height: 150px;
   }
 
   /* ----x---- section 5 ----x---- */
@@ -1671,7 +1671,7 @@ footer .content .copyright {
     padding: 12px;
   }
   .section-5 .content .item.active {
-    height: 90px;
+    height: 150px;
   }
 }
 
@@ -1747,10 +1747,11 @@ footer .content .copyright {
 
   .section-5 .content .item .title .buttons {
     margin-left: 20px;
+    z-index: 20;
   }
 
   .section-5 .content .item.active {
-    height: 100px;
+    height: 150px;
   }
 
   /* ----x---- section 5 ----x---- */
