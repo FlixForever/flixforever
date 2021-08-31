@@ -35,6 +35,36 @@ img {
   --very-dark-gray: #1c1c1c;
   --dark-red: #b1060f;
 }
+/* ANIMATED UNDERLINE */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #e50914;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #e50914;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 40px;
+  }
+}
+
 .landing {
   display: flex;
 }
@@ -348,6 +378,7 @@ section {
 .loader {
   background: none repeat scroll 0 0 black;
   position: fixed;
+  pointer-events: none;
   bottom: 0;
   left: 0;
   right: 0;
