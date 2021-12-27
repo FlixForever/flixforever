@@ -295,6 +295,12 @@ a {
   font-size: 1.25rem; /* 20px */
   color: var(--black);
   transition: box-shadow 400ms;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .btn:hover {
   box-shadow: #b1060f4f 0px 35px 50px;
@@ -313,6 +319,12 @@ a {
   cursor: pointer;
   font-weight: bold;
   transition: box-shadow 400ms;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .btn2:hover {
   box-shadow: #b1060f4f 0px 35px 80px;
@@ -323,6 +335,12 @@ a {
   background-color: rgba(0, 0, 0, 0.308);
   border-radius: 10px;
   border: var(--primary-red) 1px solid;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .link {
   display: inline-block;
@@ -853,6 +871,12 @@ header .header .bar-btns i {
   border-radius: 50px;
   cursor: pointer;
   font-size: 18px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .section-4 .content table tr td .method .choose p.active {
   background-color: #1c1c1c;
@@ -2080,6 +2104,12 @@ footer .content .copyright {
   color: var(--black);
   font-size: 21px;
   font-family: var(--nexa-bold);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .continue-btn i {
@@ -2424,3 +2454,105 @@ footer .content .copyright {
 }
 
 /* ----------x---------- read more page ----------x---------- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto !important; /* 15% from the top and centered */
+  padding: 20px;
+  width: 50%; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+}
+
+/* The Close Button */
+.close {
+  color: var(--dark-red);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Modal Header */
+.modal-header {
+  padding: 10px;
+  padding-left: 20px;
+  border-top-right-radius: 10px;
+  font-family: var(--bebas);
+  color: var(--dark-red);
+  letter-spacing: 1px;
+  border-top-left-radius: 10px;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 20px;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: var(--dark-red);
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 10px;
+  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  color: #cacaca;
+  background-color: #111111;
+  font-family: var(--nexa-light);
+}
+#modal-bold {
+  font-family: var(--nexa-bold);
+}
+.modalButton {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  height: 3.15em;
+  line-height: 3.25em;
+  padding: 0 2.2em;
+  text-align: center;
+  font-family: var(--nexa-bold);
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--white);
+}
+@media screen and (max-width: 980px) {
+  .modal-content {
+    margin: 25% auto !important; /* 15% from the top and centered */
+    width: 90%; /* Could be more or less, depending on screen size */
+  }
+}

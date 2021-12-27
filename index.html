@@ -277,8 +277,8 @@
                 <div class="method">
                   <p>Payment Method</p>
                   <div class="choose">
-                    <p class="active">PayPal</p>
-                    <p>Crypto</p>
+                    <p class="active">Crypto</p>
+                    <p>PayPal</p>
                   </div>
                   <p class="fee">*No fees on crypto transactions.</p>
                 </div>
@@ -286,49 +286,45 @@
               <td>
                 <div class="item paypal show">
                   <p>Basic Plan</p>
-                  <span>$4.99</span>
-                  <a data-sellix-product="612a46c712be8" class="btn2"
-                    >Buy Now</a
-                  >
-                </div>
-                <div class="item crypto">
-                  <p>Basic Plan</p>
                   <span>$4.49</span>
                   <a data-sellix-product="612a4713505b7" class="btn2"
                     >Buy Now</a
                   >
                 </div>
+                <div class="item crypto">
+                  <p>Basic Plan</p>
+                  <span>$4.99</span>
+                  <a onclick="openModal()" class="btn2">Buy Now</a>
+                </div>
               </td>
               <td>
                 <div class="item paypal active show">
-                  <p>Standard Plan</p>
-                  <span>$6.99</span>
-                  <a data-sellix-product="612a473dad78e" class="btn2"
-                    >Buy Now</a
-                  >
-                </div>
-                <div class="item crypto active">
                   <p>Standard Plan</p>
                   <span>$6.49</span>
                   <a data-sellix-product="612a4760d2975" class="btn2"
                     >Buy Now</a
                   >
                 </div>
+                <div class="item crypto active">
+                  <p>Standard Plan</p>
+                  <span>$6.99</span>
+
+                  <a onclick="openModal()" class="btn2">Buy Now</a>
+                </div>
               </td>
               <td>
                 <div class="item paypal show">
-                  <p>Premium Plan</p>
-                  <span>$8.99</span>
-                  <a data-sellix-product="612a479a34ffb" class="btn2"
-                    >Buy Now</a
-                  >
-                </div>
-                <div class="item crypto">
                   <p>Premium Plan</p>
                   <span>$7.99</span>
                   <a data-sellix-product="612a47f29ed0d" class="btn2"
                     >Buy Now</a
                   >
+                </div>
+                <div class="item crypto">
+                  <p>Premium Plan</p>
+                  <span>$8.99</span>
+
+                  <a onclick="openModal()" class="btn2">Buy Now</a>
                 </div>
               </td>
             </tr>
@@ -378,7 +374,7 @@
             </p>
             <hr class="cardBreak" />
             <p class="cardPricingText">$4.49</p>
-            <div class="paypalBuy" data-sellix-product="612a46c712be8">
+            <div class="paypalBuy" onclick="openModal()">
               Buy with PayPal + Fees
             </div>
             <div class="paypalBuy" data-sellix-product="612a4713505b7">
@@ -398,7 +394,7 @@
             </p>
             <hr class="cardBreak" />
             <p class="cardPricingText">$6.49</p>
-            <div class="paypalBuy" data-sellix-product="612a473dad78e">
+            <div class="paypalBuy" onclick="openModal()">
               Buy with PayPal + Fees
             </div>
             <div class="paypalBuy" data-sellix-product="612a4760d2975">
@@ -418,12 +414,40 @@
             </p>
             <hr class="cardBreak" />
             <p class="cardPricingText">$7.99</p>
-            <div class="paypalBuy" data-sellix-product="612a479a34ffb">
+            <div class="paypalBuy" onclick="openModal()">
               Buy with PayPal + Fees
             </div>
             <div class="paypalBuy" data-sellix-product="612a47f29ed0d">
               Buy with Crypto
             </div>
+          </div>
+        </div>
+      </div>
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+
+            <h2>PayPal Payments</h2>
+          </div>
+          <div class="modal-body">
+            <p>
+              <span id="modal-bold"
+                >We are no longer accepting PayPal payments through the website
+                due to their usage policy.</span
+              ><br /><br />
+              Please join our Discord server and create a ticket using the
+              instructions in #pay-with-paypal channel to purchase a plan using
+              PayPal 'Friends & Family'.
+            </p>
+
+            <br />
+          </div>
+          <div class="modal-footer">
+            <a href="https://discord.com/invite/T72cS2Tpwq" class="modalButton"
+              >Join Discord Server</a
+            >
           </div>
         </div>
       </div>
@@ -433,7 +457,10 @@
       <div class="wrapper">
         <div class="section-header">
           <h2><span>frequently asked questions</span></h2>
-          <p>“One who never asks, either knows everything, or nothing. - Master Oogway”</p>
+          <p>
+            “One who never asks, either knows everything, or nothing. - Master
+            Oogway”
+          </p>
         </div>
         <div class="content">
           <div class="item">
@@ -762,5 +789,22 @@
 
     <script src="./app.js"></script>
     <script src="./scripts/index.js"></script>
+    <script>
+      function openModal() {
+        modal.style.display = "block";
+      }
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementsByClassName("modalButton");
+      console.log(btn);
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
